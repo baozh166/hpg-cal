@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+<div style="text-align:center;"><body>
+
+<img src="hipergator.png"><br><br><br><br><br>
+<h1>Computing Resource Calculator</h1><br>
+
+<form method="POST", action="{{ url_for('.index') }}" autocomplete="on">
+  <label for="stype">Search type_DB</label>
+  <label for="fsize">.................File size (Byte)</label>
+  <label for="cpu">...................Cpu cores</label>
+  <label for="mem">.............................Memory (GB)</label>
+  
+  <br>
+
+  <select name="Search type" id="stype" style="width: 175px;">
+    <option value="blastn">blastn_nt</option>
+    <option value="blastp">blastp_nr</option>
+    <option value="blastx">blastx_nr</option>
+    <option value="tblastn">tblastn_nt</option>
+    <option value="tblastx">tblastx_nt</option> 
+  </select>  
+
+  <input type="number" id="fize" name="file_size" placeholder="File size in Byte" required="required" autocomplete="on"/>
+  <input type="number" id="cpu" name="cpu" value=1 required="required" autocomplete="on"/>
+  <input type="number" id="mem" name="mem" value=1 required="required" autocomplete="on"/>
+
+  <br><br><br><br><br><br><br>
+  <p>The estimated computing time (min):</p>
+  {{ result }}
+
+  <br><br><br><br>
+
+  <button type="submit">Predict</button>
+</form>
+
+
+
+</body>
+</html>
