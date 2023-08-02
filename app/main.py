@@ -27,6 +27,8 @@ def index():
         df.columns = ["search_blastp", "search_tblastn", "db_nr", "db_nt", "file_size", "cpu", "mem"]
         prediction = model.predict(df)
         res = int(prediction[0])
+        if res < 0: 
+            res = 0
 
     return render_template("index.html", result=res)
 
