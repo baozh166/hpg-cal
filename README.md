@@ -1,4 +1,4 @@
-How to run this Calculator on a local computer, assuming the Python and pip has been installed
+How to run this Calculator on a local computer, assuming the Python and pip have been installed
 1. $git clone https://github.com/baozh166/hpg-cal.git
 2. If the virtualenv was not installed, then $pip install virtualenv
 3. Within the hpg-cal directory, $virtualenv --python=python3 venv
