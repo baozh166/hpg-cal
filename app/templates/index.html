@@ -13,12 +13,14 @@
 	<h4><label for="stype">Search type_DB:</label></h4>
       </td>
       <td>
-        <select class="dbSelect" name="Search type" id="stype" size="3" style="width: 183px;" required="required">
-        <option value="blastn">blastn_nt</option>
-        <option value="blastp">blastp_nr</option>
-        <option value="blastx">blastx_nr</option>
-        <option value="tblastn">tblastn_nt</option>
-        <option value="tblastx">tblastx_nt</option>
+        <select class="dbSelect" name="Search type" id="stype" size="5" style="width: 183px;" required="required">
+        <option value="blastn">NCBI_blastn_nt</option>
+        <option value="blastp">NCBI_blastp_nr</option>
+        <option value="blastx">NCBI_blastx_nr</option>
+        <option value="tblastn">NCBI_tblastn_nt</option>
+        <option value="tblastx">NCBI_tblastx_nt</option>
+        <option value="diam_blastp">Diamond_blastp_nr</option>
+        <option value="diam_blastx">Diamond_blastx_nr</option>
         </select>
       </td>
     </tr>
@@ -103,11 +105,11 @@
   </script>
 
   <br><br><br><br><br><br>
-  <h4>The estimated computing time (min):</h4>
-  {{ result }}
+  <h3>The estimated computing time (h):</h3>
+  <h2 style="color:green;"> {{ result }} </h2>
   <br><br><br><br>
 
-  <button type="submit">Predict</button>
+  <button type="submit"> Predict </button>
 </form>
 
 
